@@ -4,7 +4,11 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { Icons as I } from './Icons';
 
-const ALTROBOARD_URL = 'https://altroboard.vercel.app/';
+const ALTRO_APPS = [
+  { name: 'AltroBoard', url: 'https://altroboard.vercel.app/' },
+  { name: 'AltroShop', url: 'https://altroshop.vercel.app/' },
+  { name: 'AltroTodo', url: 'https://altrotodo.vercel.app/' },
+];
 
 const NAV = [
   { href: '/',     label: '대시보드', icon: I.Grid },
@@ -133,11 +137,14 @@ export default function NavBar() {
                   설정
                 </Link>
               )}
-              <a href={ALTROBOARD_URL} target="_blank" rel="noopener noreferrer" className="bj-drawer-item">
-                <span className="bj-drawer-item-icon"><I.Apps width={20} height={20} /></span>
-                AltroBoard 메인
-                <span className="bj-drawer-item-ext"><I.Ext width={13} height={13} /></span>
-              </a>
+              <div className="bj-drawer-sect">다른 Altro 앱</div>
+              {ALTRO_APPS.map(app => (
+                <a key={app.url} href={app.url} target="_blank" rel="noopener noreferrer" className="bj-drawer-item">
+                  <span className="bj-drawer-item-icon"><I.Apps width={20} height={20} /></span>
+                  {app.name}
+                  <span className="bj-drawer-item-ext"><I.Ext width={13} height={13} /></span>
+                </a>
+              ))}
             </nav>
 
             {user && (
