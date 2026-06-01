@@ -35,12 +35,6 @@ npm run dev      # http://localhost:3000
 npm run build    # 프로덕션 빌드
 ```
 
-`.env.local` 에 Firebase 설정(`NEXT_PUBLIC_FIREBASE_*`)이 필요합니다.
-
-## 🔐 Firebase 규칙 (최초 1회)
-
-데이터 저장/조회를 위해 `database.rules.json` 의 `dash_*` 규칙을 Firebase 콘솔 → Realtime Database → 규칙에 게시하세요. (로그인은 게시 전에도 동작)
-
 ## 📁 구조
 
 ```
