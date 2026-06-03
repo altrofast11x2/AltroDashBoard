@@ -8,6 +8,7 @@ const ALTRO_APPS = [
   { name: 'AltroBoard', url: 'https://altroboard.vercel.app/' },
   { name: 'AltroShop', url: 'https://altroshop.vercel.app/' },
   { name: 'AltroTodo', url: 'https://altrotodo.vercel.app/' },
+  { name: 'AltroAi', url: 'https://altro-ai.vercel.app/' },
 ];
 
 const NAV = [
